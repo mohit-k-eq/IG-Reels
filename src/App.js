@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import VideoCard from './VideoCard';
+
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // BEM NAMING CONVETIION
+    <div className="app">
+     <h1>Lets Build IG REELS CLone</h1>
+       <div className="app__top">
+        <img className="app__logo"
+          src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png"
+          alt=""
+        />
+        <h1>Reels</h1>
+        <div className="app__videos">
+          <VideoCard
+            channel='developer'
+            avatarsrc='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg'
+
+            song='Test song - mohit'
+            url='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+            likes={707}
+            shares={150}
+          />
+          <VideoCard />
+          <VideoCard /> 
+          <VideoCard />
+          <VideoCard />
+        </div>
+       </div>
+
     </div>
   );
 }
